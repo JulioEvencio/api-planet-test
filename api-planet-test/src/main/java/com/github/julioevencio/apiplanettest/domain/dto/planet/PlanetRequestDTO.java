@@ -6,22 +6,22 @@ import jakarta.validation.constraints.NotBlank;
 
 public class PlanetRequestDTO {
 
-	@NotBlank(message = "{field.planet.name}")
-	@Length(max = 255, min = 1, message = "{field.planet.name}")
+	@NotBlank(message = "{planet.field.name.empty}")
+	@Length(max = 255, min = 1, message = "{planet.field.name.lenght}")
 	private String name;
 
-	@NotBlank(message = "{field.planet.climate}")
-	@Length(max = 255, min = 1, message = "{field.planet.climate}")
+	@NotBlank(message = "{planet.field.climate.empty}")
+	@Length(max = 255, min = 1, message = "{planet.field.climate.lenght}")
 	private String climate;
 
-	@NotBlank(message = "{field.planet.terrain}")
-	@Length(max = 255, min = 1, message = "{field.planet.terrain}")
+	@NotBlank(message = "{planet.field.terrain.empty}")
+	@Length(max = 255, min = 1, message = "{planet.field.terrain.lenght}")
 	private String terrain;
 
 	public PlanetRequestDTO(
-			@NotBlank(message = "{field.planet.name}") @Length(max = 255, min = 1, message = "{field.planet.name}") String name,
-			@NotBlank(message = "{field.planet.climate}") @Length(max = 255, min = 1, message = "{field.planet.climate}") String climate,
-			@NotBlank(message = "{field.planet.terrain}") @Length(max = 255, min = 1, message = "{field.planet.terrain}") String terrain) {
+			@NotBlank(message = "{planet.field.name.empty}") @Length(max = 255, min = 1, message = "{planet.field.name.lenght}") String name,
+			@NotBlank(message = "{planet.field.climate.empty}") @Length(max = 255, min = 1, message = "{planet.field.climate.lenght}") String climate,
+			@NotBlank(message = "{planet.field.terrain.empty}") @Length(max = 255, min = 1, message = "{planet.field.terrain.lenght}") String terrain) {
 		this.name = name;
 		this.climate = climate;
 		this.terrain = terrain;
@@ -31,24 +31,12 @@ public class PlanetRequestDTO {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getClimate() {
 		return climate;
 	}
 
-	public void setClimate(String climate) {
-		this.climate = climate;
-	}
-
 	public String getTerrain() {
 		return terrain;
-	}
-
-	public void setTerrain(String terrain) {
-		this.terrain = terrain;
 	}
 
 }
