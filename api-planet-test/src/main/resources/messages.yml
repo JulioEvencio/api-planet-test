@@ -1,0 +1,5 @@
+field:
+    planet:
+        name: name invalid
+        climate: climate invalid
+        terrain: terrain invalid
