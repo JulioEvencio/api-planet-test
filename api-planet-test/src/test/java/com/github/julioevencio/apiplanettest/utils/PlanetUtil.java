@@ -3,6 +3,7 @@ package com.github.julioevencio.apiplanettest.utils;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.julioevencio.apiplanettest.domain.dto.planet.PlanetRequestDTO;
 import com.github.julioevencio.apiplanettest.domain.entities.PlanetEntity;
 
 public class PlanetUtil {
@@ -23,6 +24,10 @@ public class PlanetUtil {
 		planets.add(new PlanetEntity(null, "Planet 3", "Climate 3", "Terrain 3"));
 
 		return planets;
+	}
+
+	public static PlanetRequestDTO makePlanetRequestDTO() {
+		return new PlanetRequestDTO("Planet Request", "Climate Request", "Terrain Request");
 	}
 
 }
